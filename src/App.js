@@ -12,7 +12,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/generate_emails', {
+      const response = await fetch('http://findtheirmail-backend-production.up.railway.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
