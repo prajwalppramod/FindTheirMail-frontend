@@ -12,10 +12,11 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://findtheirmail-backend-production.up.railway.app', {
+      const response = await fetch('https://findtheirmail-backend-production.up.railway.app/generate_emails', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://findtheirmail-backend-production.up.railway.app'
         },
         body: JSON.stringify({
           email,
